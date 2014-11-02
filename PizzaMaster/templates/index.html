@@ -1,0 +1,97 @@
+{% load static from staticfiles %}
+{% load app_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Выездная пиццерия</title>
+    <meta name="description" content="Выездная пиццерия">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/stl.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- head -->
+    <div class="head">
+        <div class="head-wrapper">
+            <div class="title"><img src="{% static 'img/main-title.png' %}" alt="Выездная пиццерия" /></div>
+            <div class="number"><a href="tel:375336650229">+375 (33) 665-02-29</a></div>
+            <div class="bubble">Готовим там,<br/>где вам удобно!</div>
+            <div class="scroll"><a href="#goto"></a></div>
+        </div>
+    </div>
+    <!-- /head -->
+    
+    <div class="block1">
+        <a name="goto" class="goto">&nbsp;</a>
+        <div class="wrapper">
+            <div class="block-title"><img src="{% static 'img/h1-title.png' %}" alt="Почему мы?" /></div>
+
+            <div class="bi clearFix">
+                <div class="item i1">
+                    <div class="title">Готовим там, где<br/>вам удобно!</div>
+                    Приезжаем к вам вместе с профессионалным оборудованием. Готовим как в помещениях, так и на открытых площадках. Устройте праздник там, где выхотите!
+                </div>
+                <div class="item i2">
+                    <div class="title">Всегда качественые<br/>и свежие ингредиенты!</div>
+                    Выбирайте меню самостоятельно! Перед выездом мы всегда закупаем свежие продукты, поэтому наши пиццы получаются невероятно вкусными!
+                </div>
+                <div class="cl"></div>
+                <div class="item i3">
+                    <div class="title">Весь процесс происходит<br/>у вас на глазах!</div>
+                    Все пиццы готовятся мастерами с большим стажем работы. Все происходит у вас на глазах. Всегда можно поучавствовать в процессе готовки и узнать секреты мастерства!
+                </div>
+                <div class="item i4">
+                    <div class="title">Покажем интересное шоу<br/>&#171;Пицца-акробатика&#187;</div>
+                    Не дадим заскучать! Во время приготовления пицц вы сможете насладится профессионально исполнеными трюками в рамках мини-шоу &#171;Пицца-акробатика&#187;.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block2">
+        <div class="photo"><img src="{% static 'img/photo.png' %}" alt=""/></div>
+        <div class="wrapper">
+            <div class="text">Последние фотоотчеты можно посмотреть<br/>на нашей страничке <a href="#" target="_blank">Вконтакте</a>.</div>
+            <div class="bi clearFix">
+                {% for i in 12|get_range %}
+                    {% with forloop.counter|slugify as number %}
+                    <a href="#"><img src="{% static 'img/tmp_'|add:number|add:'.png' %}" alt=""/></a>
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="block3">
+        <div class="wrapper">
+            <div class="text">Остались вопросы? Позвоните нам!</div>
+            <div class="phone"><a href="tel:375336650229">+375 <span>(33)</span> 665-02-29</a></div>
+        </div>
+    </div>
+    
+    <div class="block4">
+        <div class="wrapper">
+            <div class="bi clearFix">
+                <div class="item i1">Цена и время проведения<br/>мероприятия договорные</div>
+                <div class="item i2">Обслужим как большие,<br/>так и маленькие компании</div>
+                <div class="item i3">Желательное питание<br/>в сети: 230В, 4кВт.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="wrapper clearFix">
+            <div class="left-col">
+                &copy; Пицца Мастер, 2014<br/>Предложения и пожелания высылайте на <a href="mailto:email@test.com">Почту</a> или пишите <a href="#">Вконтакте</a>
+            </div>
+            <div class="right-col">
+                Вся техника предоставлена нашим партером,<br/>компанией <span>&#171;</span><a href="#" target="_blank">Ресторан Плюс</a><span>&#187;</span>
+            </div>
+        </div>
+    </div>
+    
+<!-- www.addthis.com/dashboard-->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5451f78823777e7a" async="async"></script>
+
+</body>
+</html>
