@@ -1,6 +1,5 @@
 from django.shortcuts import render
 import vk
-import re
 from django.conf import settings
 possible_values = [1280, 807, 604, 130, 75]
 
