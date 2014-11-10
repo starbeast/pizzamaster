@@ -28,8 +28,8 @@
         #cboxLoadedContent{background: transparent; padding:0; border: 1px solid #a6a6a6; border-radius: 6px;
         }
         #cboxLoadingGraphic{background:url('../img/loading.gif') no-repeat center center;}
-        #cboxLoadingOverlay{background:#000;}
-        #cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
+        #cboxLoadingOverlay{background:rgba(245, 245, 245, 0.8);}
+        #cboxTitle{position:absolute; top:-22px; left:0; color:rgba(245, 245, 245, 0.8);}
         #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
 
         /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */

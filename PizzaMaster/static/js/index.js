@@ -10,7 +10,7 @@
             $this.css('left', offset + 'px');
 //                $this.off('load');
             if(ind == images.length) {
-                $(".image-wrapper").colorbox({rel:'image-wrapper', transition:"fade", width: '40%', height: '40%'});
+                $(".image-wrapper").colorbox({rel:'image-wrapper', transition:"fade", width: '45%', height: '45%'});
             }
         });
     });
