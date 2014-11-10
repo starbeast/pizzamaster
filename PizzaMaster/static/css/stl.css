@@ -276,6 +276,16 @@ ul li{
         top: -30px;
         left: -30px;
 }
+
+.image-wrapper {
+    position: relative;
+}
+
+.cropped-image {
+    position: absolute;
+    top: 0;
+    max-height: 140px;
+}
 .block2 {
         position: relative;
         z-index: 50;
@@ -381,7 +391,7 @@ ul li{
 }
 #at4-share {
         position: fixed !important;
-        right: 0px !important;
+        right: 0 !important;
         top: 280px !important;
-        bottom: none !important;
+        bottom: inherit !important;
 }

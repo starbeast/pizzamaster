@@ -24,7 +24,7 @@ SECRET_KEY = 'r1%^o@)%k^msh4tgwjq_b0s0+l8w79kxq)60-k9y$pl^16x*%+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -107,3 +107,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 TEMPLATE_DIRS = (
     "%s/%s/" % (ROOT_PATH, 'templates'),
 )
+
+VK_AUTH_TOKEN = 'dd96d77659c9c8ce91889813fd10d607d4e3e7ebf792dbd6d365c2d3cc0a46ad6468b4142778cb4e6aae3'
+VK_APP_ID = 4616647
+VK_OWNER_ID = 175693822
+VK_ALBUM_ID = 205011605

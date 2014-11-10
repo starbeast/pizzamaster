@@ -9,6 +9,10 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
     <link href="{% static 'css/stl.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/colorbox.css' %}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.colorbox-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
 </head>
 <body>
     <!-- head -->
@@ -52,10 +56,10 @@
         <div class="photo"><img src="{% static 'img/photo.png' %}" alt=""/></div>
         <div class="wrapper">
             <div class="text">Последние фотоотчеты можно посмотреть<br/>на нашей страничке <a href="#" target="_blank">Вконтакте</a>.</div>
-            <div class="bi clearFix">
-                {% for i in 12|get_range %}
+            <div class="bi clearFix images">
+                {% for photo in icons %}
                     {% with forloop.counter|slugify as number %}
-                    <a href="#"><img src="{% static 'img/tmp_'|add:number|add:'.png' %}" alt=""/></a>
+                    <a class='image-wrapper' href="{{ photo.full }}"><img class='cropped-image' src="{{ photo.icon }}" alt=""/></a>
                     {% endwith %}
                 {% endfor %}
             </div>
