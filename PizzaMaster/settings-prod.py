@@ -1,3 +1,3 @@
-from django.conf import settings
+from PizzaMaster.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
