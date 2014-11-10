@@ -1,1 +1,1 @@
-web: gunicorn PizzaMaster.wsgi --log-file -
+web: python manage.py collectstatic --noinput; gunicorn PizzaMaster.wsgi --log-file -
