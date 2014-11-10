@@ -333,11 +333,12 @@ ul li{
         color: #251c1a;
         text-decoration: none;
 }
+
 .block3 .phone a span {
         color: #8dd501;
 }
 .block3 .phone a:hover {
-        cursor: text;
+        cursor: pointer;
         text-decoration: none;
         color: #251c1a;
 }
