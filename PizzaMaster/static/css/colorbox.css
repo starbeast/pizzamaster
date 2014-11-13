@@ -20,13 +20,12 @@
     Change the following styles to modify the appearance of Colorbox.  They are
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
-#cboxOverlay{background:#fff;}
+#cboxOverlay{background:#000; opacity: 0.6}
 #colorbox{outline:0;}
     #cboxContent{margin-top:32px; overflow:visible; background:#fff;}
         .cboxIframe{background:rgba(245, 245, 245, 0.8);}
         #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxLoadedContent{background: transparent; padding:0; border: 1px solid #a6a6a6; border-radius: 6px;
-        }
+        #cboxLoadedContent{background: transparent; padding:0;}
         #cboxLoadingGraphic{background:url('../img/loading.gif') no-repeat center center;}
         #cboxLoadingOverlay{background:rgba(245, 245, 245, 0.8);}
         #cboxTitle{position:absolute; top:-22px; left:0; color:rgba(245, 245, 245, 0.8);}
