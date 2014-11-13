@@ -21,7 +21,7 @@ def get_biggest(icon, threshold=None):
 
 def home(request):
     vkapi = vk.API(access_token=settings.VK_AUTH_TOKEN, api_version='3.0')
-    photos = vkapi.photos.get(album_id=settings.VK_ALBUM_ID, owner_id=settings.VK_OWNER_ID, rev=0)
+    photos = vkapi.photos.get(album_id=settings.VK_GROUP_ALBUM_ID, owner_id=settings.VK_GROUP_ID, rev=0)
     photos = reversed(photos[-12:])
     links_icons = [{'icon': get_biggest(img, 604), 'full': get_biggest(img, 1280)} for img in photos]
     return render(request, 'index.html', {'icons': links_icons})
