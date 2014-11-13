@@ -55,7 +55,7 @@
     <div class="block2">
         <div class="photo"><img src="{% static 'img/photo.png' %}" alt=""/></div>
         <div class="wrapper">
-            <div class="text">Последние фотоотчеты можно посмотреть<br/>на нашей страничке <a href="http://www.vk.com/" target="_blank">Вконтакте</a>.</div>
+            <div class="text">Последние фотоотчеты можно посмотреть<br/>на нашей страничке <a href="{{ url }}" target="_blank">Вконтакте</a>.</div>
             <div class="bi clearFix images">
                 {% for photo in icons %}
                     {% with forloop.counter|slugify as number %}
@@ -86,7 +86,7 @@
     <div class="footer">
         <div class="wrapper clearFix">
             <div class="left-col">
-                &copy; Пицца Мастер, 2014<br/>Предложения и пожелания высылайте на <a href="mailto:hello@pizzamaster.by">Почту</a> или пишите <a href="http://www.vk.com/">Вконтакте</a>
+                &copy; Пицца Мастер, 2014<br/>Предложения и пожелания высылайте на <a href="mailto:pizzatyt@mail.ru" target="_blank">Почту</a> или пишите <a href="{{ url }}" target="_blank">Вконтакте</a>
             </div>
             <div class="right-col">
                 Вся техника предоставлена нашим партером,<br/>компанией <span>&#171;</span><a href="http://www.restoran-plus.by/" target="_blank">Ресторан Плюс</a><span>&#187;</span>

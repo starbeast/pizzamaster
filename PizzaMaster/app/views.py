@@ -24,4 +24,4 @@ def home(request):
     photos = vkapi.photos.get(album_id=settings.VK_GROUP_ALBUM_ID, owner_id=settings.VK_GROUP_ID, rev=0)
     photos = reversed(photos[-12:])
     links_icons = [{'icon': get_biggest(img, 604), 'full': get_biggest(img, 1280)} for img in photos]
-    return render(request, 'index.html', {'icons': links_icons})
+    return render(request, 'index.html', {'icons': links_icons, 'url': settings.VK_GROUP_URL})
